@@ -148,13 +148,14 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
             if(interface->GetMacAddress().GetLength() == 0)
                 interface->SetMacAddress(mac_addr_type, (const unsigned char*)ifaddr->ifa_addr->sa_data, mac_addr_length);
         
+#if defined(NPT_CONFIG_HAVE_NET_IF_DL_H)        
         if (ifaddr->ifa_addr->sa_family == AF_LINK) {
             //Refer to LLADDR
             struct sockaddr_dl * socket_dl = (struct sockaddr_dl *)ifaddr->ifa_addr;
             
             interface->SetMacAddress(mac_addr_type, (const unsigned char*)socket_dl->sdl_data+socket_dl->sdl_nlen, socket_dl->sdl_alen);
         }
-        
+#endif
             switch (ifaddr->ifa_addr->sa_family) {
                 case AF_INET: {
                     // primary address

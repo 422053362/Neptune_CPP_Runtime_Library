@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5467D4D6-8482-4850-9952-478020788064</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Virage</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D3D79C49-5706-465C-BA60-9D930B76B918</key>
+		<string>http://primax.no-ip.biz/svn/pmxdlna/trunk/Code/DMS</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Virage/Build/apple-ios-xcode/Virage.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D3D79C49-5706-465C-BA60-9D930B76B918</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>D3D79C49-5706-465C-BA60-9D930B76B918</key>
+		<string>http://primax.no-ip.biz/svn/pmxdlna</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://primax.no-ip.biz/svn/pmxdlna/trunk/Code/DMS/Virage/Build/apple-ios-xcode/Virage.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D3D79C49-5706-465C-BA60-9D930B76B918</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
+			<string>branches</string>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlRepositoryTagsRelativeLocationKey</key>
+			<string>tags</string>
+			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
+			<string>trunk</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D3D79C49-5706-465C-BA60-9D930B76B918</string>
+			<key>IDESourceControlWCCName</key>
+			<string>dms_src</string>
+		</dict>
+	</array>
+</dict>
+</plist>

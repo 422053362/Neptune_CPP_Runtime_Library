@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>899B48A9-C09A-4BF0-A3F7-1C9565A5389F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Neptune</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>197761F6-BA9B-4EA0-B1D5-28A1D7475EFD</key>
+		<string>https://github.com/JamieYan/Neptune_CPP_Runtime_Library.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Neptune.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>197761F6-BA9B-4EA0-B1D5-28A1D7475EFD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JamieYan/Neptune_CPP_Runtime_Library.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>197761F6-BA9B-4EA0-B1D5-28A1D7475EFD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>197761F6-BA9B-4EA0-B1D5-28A1D7475EFD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Neptune_CPP_Runtime_Library</string>
+		</dict>
+	</array>
+</dict>
+</plist>

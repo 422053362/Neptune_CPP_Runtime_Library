@@ -121,23 +121,26 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
             switch (ifaddr->ifa_addr->sa_family) {
                 case AF_LOCAL:
                 case AF_INET:
+#if defined(AF_LINK)
                 case AF_LINK:
+#endif
                     mac_addr_type = NPT_MacAddress::TYPE_ETHERNET;
 #if defined(ARPHRD_LOOPBACK)      
                     mac_addr_type = NPT_MacAddress::TYPE_LOOPBACK;
                     length = 0;
 #endif               
                     break;
-                    
+#if defined(AF_PPP)
                 case AF_PPP:
                     mac_addr_type = NPT_MacAddress::TYPE_PPP;
                     mac_addr_length = 0;
                     break;
-
+#endif
+#if defined(AF_IEEE80211)
                 case AF_IEEE80211:
                     mac_addr_type = NPT_MacAddress::TYPE_IEEE_802_11;
                     break;
-                    
+#endif                    
                 default:
                     mac_addr_type = NPT_MacAddress::TYPE_UNKNOWN;
                     mac_addr_length = sizeof(ifaddr->ifa_addr->sa_data);
@@ -163,19 +166,20 @@ NPT_NetworkInterface::GetNetworkInterfaces(NPT_List<NPT_NetworkInterface*>& inte
                     
                     // broadcast address
                     NPT_IpAddress broadcast_address;
-                    if (flags & NPT_NETWORK_INTERFACE_FLAG_BROADCAST) {
+                    if ((flags & NPT_NETWORK_INTERFACE_FLAG_BROADCAST) && ifaddr->ifa_dstaddr) {
                         broadcast_address.Set(ntohl(((struct sockaddr_in*)ifaddr->ifa_dstaddr)->sin_addr.s_addr));
                     }
                     
                     // point to point address
                     NPT_IpAddress destination_address;
-                    if (flags & NPT_NETWORK_INTERFACE_FLAG_POINT_TO_POINT) {
+                    if ((flags & NPT_NETWORK_INTERFACE_FLAG_POINT_TO_POINT) && ifaddr->ifa_dstaddr) {
                         destination_address.Set(ntohl(((struct sockaddr_in*)ifaddr->ifa_dstaddr)->sin_addr.s_addr));
                     }
                     
                     // netmask
                     NPT_IpAddress netmask(0xFFFFFFFF);
-                    netmask.Set(ntohl(((struct sockaddr_in*)ifaddr->ifa_netmask)->sin_addr.s_addr));
+                    if(ifaddr->ifa_netmask)
+                        netmask.Set(ntohl(((struct sockaddr_in*)ifaddr->ifa_netmask)->sin_addr.s_addr));
                     
                     // add the address to the interface
                     NPT_NetworkInterfaceAddress iface_address(primary_address,
